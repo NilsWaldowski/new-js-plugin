@@ -1,0 +1,26 @@
+{
+    "name": "MyPlugin",
+    "description": "MyPlugin",
+    "version": "0.0.1",
+    "main": "/dist/MyPlugin.js",
+    "homepage": "",
+    "author": {
+      "name": "Nils Waldowski",
+      "email": "me@nilswaldowski.de",
+      "url": "http://nilswaldowski.de"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NilsWaldowski/MyPlugin"
+    },
+    "license": "MIT",
+    "keywords": [
+        "javascript",
+        "plugin"
+    ],
+    "ignore": [
+		"gulpfile.js"
+	],
+    "dependencies": {
+    }
+}

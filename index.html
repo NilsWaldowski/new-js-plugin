@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My New Plugin - My awesome new Plugin is awesome!</title>
+
+    <meta name="author" content="Nils Waldowski">
+    <meta name="description" content="My New Plugin">
+
+</head>
+
+<body>
+
+    <h1>My New Plugin</h1>
+
+
+    <div class="js-my-plugin">
+        This is the Plugin Container!
+
+        <a class="" href="#" data-click-me="test123">
+            Click Event!
+
+            <span class="link-span">deeper
+                <span class="link-span">even deeper</span>
+            </span>
+        </a>
+    </div>
+
+
+    <script src="dist/javascript/MyPlugin.js"></script>
+	<script>
+    var test = myPlugin.init({
+        initClass: 'js-my-plugin',
+    })
+    </script>
+
+</body>
+
+</html>

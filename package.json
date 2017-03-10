@@ -1,0 +1,48 @@
+{
+    "name": "myPlugin",
+    "title": "MyPlugin",
+    "description": "MyPlugin",
+    "version": "0.0.1",
+    "main": "dist/MyPlugin.js",
+    "homepage": "",
+    "author": {
+        "name": "Nils Waldowski",
+        "email": "me@nilswaldowski.de",
+        "url": "http://nilswaldowski.de"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NilsWaldowski/MyPlugin"
+    },
+    "bugs": {
+        "url": "https://github.com/NilsWaldowski/MyPlugin/issues"
+    },
+    "license": "MIT",
+    "keywords": [
+        "javascript",
+        "plugin"
+    ],
+    "dependencies": {},
+    "scripts": {},
+    "devDependencies": {
+        "del": "^2.0.0",
+        "gulp": "gulpjs/gulp#4.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-watch": "^4.3.9",
+        "browser-sync": "^2.11.0",
+
+        "gulp-modernizr": "^1.0.0-alpha",
+
+        "gulp-sass": "^3.0.0",
+
+        "gulp-eslint": "^3.0.1",
+        "gulp-sass-lint": "^1.2.0",
+        "gulp-uglify": "^2.0.0",
+        "gulp-clean-css": "^3.0.3",
+        "gulp-concat": "^2.6.1",
+        "gulp-optimize-js": "^1.1.0",
+
+        "gulp-pleeease": "^2.0.2"
+
+    }
+}
