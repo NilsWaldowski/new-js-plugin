@@ -1,3 +1,10 @@
+/*!
+ * myPlugin v0.0.1: MyPlugin
+ * (c) 2017 Nils Waldowski
+ * MIT License
+ * https://github.com/NilsWaldowski/MyPlugin
+ */
+
 /**
  * Plugin Pattern from Chris Ferdinandi
  * https://gomakethings.com/the-anatomy-of-a-vanilla-javascript-plugin/

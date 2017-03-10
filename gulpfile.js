@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     browserSync = require('browser-sync'),
     sass = require('gulp-sass'),
+    gulpheader = require('gulp-header'),
+    pkg = require('./package.json'),
 
 
 /**
@@ -46,6 +48,27 @@ paths = {
         templates: 'src/docs/_templates/',
         assets: 'src/docs/assets/**'
     }
+};
+
+/**
+ * Template for banner to add to file headers
+ */
+
+var banner = {
+    full :
+        '/*!\n' +
+        ' * <%= pkg.name %> v<%= pkg.version %>: <%= pkg.description %>\n' +
+        ' * (c) ' + new Date().getFullYear() + ' <%= pkg.author.name %>\n' +
+        ' * MIT License\n' +
+        ' * <%= pkg.repository.url %>\n' +
+        ' */\n\n',
+    min :
+        '/*!' +
+        ' <%= pkg.name %> v<%= pkg.version %>' +
+        ' | (c) ' + new Date().getFullYear() + ' <%= pkg.author.name %>' +
+        ' | MIT License' +
+        ' | <%= pkg.repository.url %>' +
+        ' */\n'
 };
 
 
@@ -127,6 +150,9 @@ gulp.task('js', gulp.series(function js(done) {
         .pipe(eslint.format())
         //.pipe(eslint.failOnError())
 
+        // write full header
+        .pipe(gulpheader(banner.full, { pkg : pkg }))
+
         // write unminified file
         .pipe(gulp.dest(paths.javascript.output))
 
@@ -137,6 +163,9 @@ gulp.task('js', gulp.series(function js(done) {
         .pipe(rename({
             'suffix': '.min'
         }))
+
+        // write small header
+        .pipe(gulpheader(banner.full, { pkg : pkg }))
 
         // write final file
         .pipe(gulp.dest(paths.javascript.output))
